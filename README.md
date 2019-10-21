@@ -35,7 +35,7 @@ Things you may want to cover:
 ### Association
 - has_many :articles
 - has_many :comments
-- has_many :groups, through: :groups_users
+- has_many :likes
 - has_many :relationships
 - has_many :reverses_of_relationship, class_name: 'Relationship', foreign_key: 'follow_id'
 - has_many :followers, through: :reverses_of_relationship, source: :user
@@ -68,10 +68,9 @@ Things you may want to cover:
 ### Association
 - has_many :comments
 - belongs_to :user
+- has_many :likes
 - has_many :article_tags
 - has_many :tags, through: :article_tags
-
-
 
 ## article_tagsテーブル
 
