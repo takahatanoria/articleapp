@@ -35,24 +35,25 @@
               .input.submit-btn{"data-disable-with" => "Send", :type => "submit", :value => "Send"}/
               %span
                         
-      - if user_signed_in?
-        .user-info-list      
-          .user-info-list__like
-            いいね一覧
-          .user-info-list__contribution
-            = link_to "投稿する", new_article_path, method: :get
-          .user-info-list__name  
-            = current_user.name
-            %ul.user-info-mypage
-              %li
-                %a{:href => "/users/#{current_user.id}"} マイページ
-                = link_to "ログアウト", destroy_user_session_path, method: :delete
-      - else
-        .right-header__bar__row__login
-          .right-header__bar__row__login__signin
-            = link_to "ログイン", new_user_session_path, :class => 'post'
-          .right-header__bar__row__login__register
-            = link_to "新規登録", new_user_registration_path, :class => 'post'
+      -# - if user_signed_in?
+      -#   .user-info-list      
+      -#     .user-info-list__like
+      -#       いいね一覧
+      -#     .user-info-list__contribution
+      -#       = link_to "投稿する", new_article_path, method: :get
+      -#     .user-info-list__name  
+      -#       = current_user.name
+      -#       %ul.user-info-mypage
+      -#         %li
+      -#           %a{:href => "/users/#{current_user.id}"} マイページ
+      -#           = link_to "ログアウト", destroy_user_session_path, method: :delete
+      -# - else
+      -#   .right-header__bar__row__login
+      -#     .right-header__bar__row__login__signin
+      -#       = link_to "ログイン", new_user_session_path, :class => 'post'
+      -#     .right-header__bar__row__login__register
+      -#       = link_to "新規登録", new_user_registration_path, :class => 'post'
+
 
   .header-btn
     .left-header-btn
